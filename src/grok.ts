@@ -160,7 +160,10 @@ export async function readBuildActivity(): Promise<BuildActivity> {
 
   for (const { dir, id, cwd } of await listSessionDirs()) {
     const usagePath = join(dir, "usage.json");
-    const modified = await stat(usagePath).then((info) => info.mtimeMs, () => 0);
+    const modified = await stat(usagePath).then(
+      (info) => info.mtimeMs,
+      () => 0,
+    );
     if (modified < weekAgo) continue;
 
     let usage: SessionUsage;
