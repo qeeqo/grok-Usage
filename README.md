@@ -2,6 +2,8 @@
 
 A Raycast extension that shows how much of your Grok usage limit you've used.
 
+![Grok Usage command in Raycast](media/grok-usage.png)
+
 ## What it shows
 
 - Weekly credit usage, overall and for Grok Build, Grok Chat, and Grok Voice
@@ -14,6 +16,8 @@ It has two commands:
 - **Grok Usage**: a list view with everything above
 - **Grok Usage Menu Bar**: your weekly usage percentage in the menu bar, refreshed every 5 minutes
 
+![Grok Usage in the menu bar](media/grok-usage-menu-bar.png)
+
 ## Requirements
 
 - [Raycast](https://www.raycast.com)
@@ -23,7 +27,7 @@ It has two commands:
 ## Install
 
 ```bash
-git clone git@github.com:qeeqo/grok-Usage.git
+git clone https://github.com/qeeqo/grok-Usage.git
 cd grok-Usage
 npm install
 npm run dev
