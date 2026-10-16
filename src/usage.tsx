@@ -69,7 +69,7 @@ export default function Command() {
           <List.Section title="Credits">
             <List.Item
               icon={{ source: Icon.Warning, tintColor: Color.Orange }}
-              title="Couldn't load Grok usage"
+              title="Couldn't Load Grok Usage"
               subtitle={credits.error.message}
               actions={actions}
             />

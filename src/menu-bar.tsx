@@ -19,7 +19,7 @@ export default function Command() {
       tooltip={usage ? `Grok ${usage.period.toLowerCase()} credits` : "Grok usage unavailable"}
     >
       {usage ? (
-        <MenuBarExtra.Section title={`${usage.period} credits · resets in ${formatTimeUntil(usage.resetsAt)}`}>
+        <MenuBarExtra.Section title={`${usage.period} Credits · Resets in ${formatTimeUntil(usage.resetsAt)}`}>
           {usage.products.map((product) => (
             <MenuBarExtra.Item
               key={product.name}
@@ -32,18 +32,18 @@ export default function Command() {
           {usage.onDemandPercent !== undefined && (
             <MenuBarExtra.Item
               icon={progressIcon(usage.onDemandPercent)}
-              title="On-demand spend"
+              title="On-Demand Spend"
               subtitle={formatPercent(usage.onDemandPercent)}
               onAction={openUsage}
             />
           )}
         </MenuBarExtra.Section>
       ) : (
-        credits.error && <MenuBarExtra.Item title="Couldn't load Grok usage" subtitle={credits.error.message} />
+        credits.error && <MenuBarExtra.Item title="Couldn't Load Grok Usage" subtitle={credits.error.message} />
       )}
 
       {today && (
-        <MenuBarExtra.Section title="Grok Build today">
+        <MenuBarExtra.Section title="Grok Build Today">
           <MenuBarExtra.Item
             icon={Icon.Terminal}
             title={formatTokens(today.tokens)}
